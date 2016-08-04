@@ -1,0 +1,19 @@
+{
+  "name": "0.3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Siphon",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "react-native": "https://github.com/getsiphon/react-native#c56976a",
+    "fbjs": "0.6.0",
+    "react-native-grid-view": "https://github.com/getsiphon/react-native-grid-view#da2b34e",
+    "react-native-vector-icons": "1.1.0",
+    "superagent": "1.4.0",
+    "underscore": "1.8.3",
+    "react-native-video": "0.6.1",
+    "react-native-youtube": "0.6.0",
+    "react-native-motion-manager": "0.0.6"
+  }
+}

@@ -1,0 +1,53 @@
+#!/usr/bin/env ruby
+FASTLANE_DIR = ENV['FASTLANE_DIR']
+
+$:.push File.join(FASTLANE_DIR, 'fastlane/spaceship/lib')
+$:.push File.join(FASTLANE_DIR, 'fastlane/fastlane_core/lib')
+$:.push File.join(FASTLANE_DIR, 'fastlane/credentials_manager/lib')
+$:.push File.join(FASTLANE_DIR, 'dependencies/multi_xml/lib')
+$:.push File.join(FASTLANE_DIR, 'dependencies/plist/lib')
+$:.push File.join(FASTLANE_DIR, 'dependencies/faraday/lib')
+$:.push File.join(FASTLANE_DIR, 'dependencies/faraday_middleware/lib')
+$:.push File.join(FASTLANE_DIR, 'dependencies/faraday-cookie_jar/lib')
+$:.push File.join(FASTLANE_DIR, 'dependencies/http-cookie/lib')
+$:.push File.join(FASTLANE_DIR, 'dependencies/ruby-unf/lib')
+$:.push File.join(FASTLANE_DIR, 'dependencies/ruby-domain_name/lib')
+$:.push File.join(FASTLANE_DIR, 'dependencies/colored/lib')
+$:.push File.join(FASTLANE_DIR, 'dependencies/fastimage/lib')
+$:.push File.join(FASTLANE_DIR, 'dependencies/addressable/lib')
+$:.push File.join(FASTLANE_DIR, 'dependencies/json/lib')
+$:.push File.join(FASTLANE_DIR, 'dependencies/highline/lib')
+$:.push File.join(FASTLANE_DIR, 'dependencies/multi_json/lib')
+$:.push File.join(FASTLANE_DIR, 'dependencies/commander/lib')
+$:.push File.join(FASTLANE_DIR, 'dependencies/babosa/lib')
+$:.push File.join(FASTLANE_DIR, 'dependencies/excon/lib')
+$:.push File.join(FASTLANE_DIR, 'dependencies/rubyzip/lib')
+$:.push File.join(FASTLANE_DIR, 'dependencies/terminal-table/lib')
+$:.push File.join(FASTLANE_DIR, 'dependencies/sentry-raven/lib')
+$:.push File.join(FASTLANE_DIR, 'dependencies/multipart-post/lib')
+$:.push File.join(FASTLANE_DIR, 'dependencies/security/lib')
+
+require_relative '../lib/fastlane'
+require 'optparse'
+
+class FastlaneApplication
+  def initialize(username, udid)
+    @username = username
+    @udid = udid
+  end
+
+  def run
+    ENV['FASTLANE_USER'] = @username
+    Fastlane::Utils.login(@username)
+    Fastlane::Certificate.new.ensure_certificates
+    Fastlane::Device.new.ensure_device(@udid)
+    Fastlane::Profile.new.ensure_profile
+  end
+end
+
+options = {}
+OptionParser.new do |opt|
+  opt.on('--username USERNAME') { |o| options[:username] = o }
+  opt.on('--udid UDID') { |o| options[:udid] = o }
+end.parse!
+FastlaneApplication.new(options[:username], options[:udid]).run

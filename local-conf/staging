@@ -1,0 +1,2 @@
+SP_HOST="staging-web-1-dbnxjjbtfkirqstbna.getsiphon.com"
+SP_REMOTE_SOURCE="http://staging-web-1-dbnxjjbtfkirqstbna.getsiphon.com:80/static/cli/siphon-cli.tar.gz"

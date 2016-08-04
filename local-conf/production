@@ -1,0 +1,2 @@
+SP_HOST="getsiphon.com"
+SP_REMOTE_SOURCE="http://getsiphon.com:80/static/cli/siphon-cli.tar.gz"

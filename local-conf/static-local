@@ -1,0 +1,5 @@
+# Use production for API calls & local docker container for static files
+# (i.e. Base packages)
+SP_HOST="getsiphon.com"
+SP_STATIC_HOST="local.getsiphon.com"
+SP_REMOTE_SOURCE="http://getsiphon.com:80/static/cli/siphon-cli.tar.gz"

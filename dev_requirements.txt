@@ -1,0 +1,2 @@
+-e git+https://getsiphon:CHANGEME@bitbucket.org/getsiphon/siphon-dependencies.git#egg=siphon_dependencies
+termcolor

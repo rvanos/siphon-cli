@@ -1,0 +1,24 @@
+{
+  "name": "0.4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Siphon",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "react-native": "https://github.com/getsiphon/react-native#0388697",
+    "react-native-grid-view": "https://github.com/lucholaf/react-native-grid-view#74602c5",
+    "react-native-vector-icons": "1.3.4",
+    "superagent": "1.4.0",
+    "underscore": "1.8.3",
+    "react-native-video": "0.7.1",
+    "react-native-youtube": "0.6.0",
+    "react-native-motion-manager": "0.0.6",
+    "react-native-camera": "https://github.com/getsiphon/react-native-camera#a6785cf",
+    "react-native-device-info": "0.8.4",
+    "react-native-fs": "https://github.com/getsiphon/react-native-fs#8c9e28f",
+    "react-native-linear-gradient": "1.5.2",
+    "react-native-touch-id": "1.2.4",
+    "react-native-material-kit": "0.3.0"
+  }
+}

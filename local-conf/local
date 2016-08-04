@@ -1,0 +1,4 @@
+SP_HOST="localhost"
+SP_PORT="8080"
+SP_SCHEME="http"
+SP_REMOTE_SOURCE="http://localhost:8080/static/cli/siphon-cli.tar.gz"
